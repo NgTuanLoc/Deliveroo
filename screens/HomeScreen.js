@@ -11,7 +11,7 @@ import { useNavigation } from '@react-navigation/native';
 import ExtypoIcon from 'react-native-vector-icons/Entypo';
 import AntDesignIcon from 'react-native-vector-icons/AntDesign';
 
-import { Categories } from '../components';
+import { Categories, FeaturedRow } from '../components';
 
 const HomeScreen = () => {
 	const navigation = useNavigation();
@@ -54,11 +54,30 @@ const HomeScreen = () => {
 				<AntDesignIcon name='filter' color='#00CCBB' size={20} />
 			</View>
 
-			{/* Body */}
 			<ScrollView
 				className='bg-gray-100'
 				contentContainerStyle={{ paddingBottom: 100 }}>
+				{/* Body */}
 				<Categories />
+
+				{/* Featured Rows */}
+				<FeaturedRow
+					id='1'
+					title='Featured'
+					description='Paid placements from our partners'
+				/>
+
+				{/* Tasty Discounts */}
+				<FeaturedRow
+					id='2'
+					title='Tasty Discounts'
+					description="Everyone's been enjoying these juicy discounts"
+				/>
+				<FeaturedRow
+					id='3'
+					title='Offers near you!'
+					description='Why not support your local restaurant tonight!'
+				/>
 			</ScrollView>
 		</SafeAreaView>
 	);
