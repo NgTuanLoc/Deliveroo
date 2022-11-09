@@ -1,7 +1,5 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { View, Text, SafeAreaView, Image } from 'react-native';
-import { ChevronUpDownIcon } from 'react-native-heroicons/outline';
 import { HomeScreen } from './screens';
 
 const Stack = createNativeStackNavigator();
